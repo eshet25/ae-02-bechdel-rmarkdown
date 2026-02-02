@@ -1,0 +1,41 @@
+---
+title: "Bechel"
+output: html_document
+date: "2026-01-27"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+library(fivethirtyeight)
+> library(fivethirtyeight)
+> bechdel90_13 <- bechdel %>%
++     filter(between(year, 1990, 2013))
+> View(bechdel90_13)
+> bechdel90_13 %>%
++     group_by(binary) %>%
++     summarise(
++         med_budget = median(budget_2013),
++         med_domgross = median(domgross_2013, na.rm = TRUE),
++         med_intgross = median(intgross_2013, na.rm = TRUE)
+
